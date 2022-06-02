@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Updock&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  color: rgb(255, 255, 255);
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.main-text {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+.create-new-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-field {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 2rem);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  transition: 0.4s;
+}
+
+.input-field:focus {
+  border-bottom-color: rgba(59, 125, 211, 0.767);
+}
+
+.call-to-action-btn {
+  border: none;
+  outline: none;
+  background-color: rgba(59, 125, 211, 0.767);
+  font-weight: bold;
+  color: #000;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.tasks {
+  width: max(20vw 50%);
+  margin-top: 2rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(116, 154, 197, 0.479);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  color: rgb(59, 64, 70);
+}
+
+.main-content {
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
+}
+
+.call-to-action-buttons {
+  min-width: fit-content;
+}
+
+button {
+  border: none;
+  background-color: rgba(59, 125, 211, 0.767);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 1vw, 1.2rem);
+}
+
+.delete-btn {
+  background-color: rgb(243, 40, 80);
+  color: rgb(238, 238, 238);
+  font-size: clamp(0.7rem, 1vw, 1.2rem);
+}
+
+.tasks .task.is-complete {
+  opacity: 0.7;
+}
+
+.tasks .task.is-complete .main-content {
+  text-decoration: line-through;
+}
